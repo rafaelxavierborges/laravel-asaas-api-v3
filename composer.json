@@ -1,0 +1,49 @@
+{
+    "name": "rafaelxavierborges/laravel-asaas-api-v3",
+    "description": "Pacote independente de integracao Asaas.com para Laravel 5",
+    "keywords": [
+        "asaas",
+        "api",
+        "gateway"
+      ],
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "illuminate/http": "^5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Asaas\\Api\\": "laravel-asaas-api-v3/src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Asaas\\Api\\Test\\": "laravel-asaas-api-v3/tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Asaas\\Api\\ServiceProvider"
+            ],
+            "aliases":{
+                "Asaas": "Asaas\\Api\\Asaas"
+            }
+        },
+        "branch-alias": {
+            "master": "1.0"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rafael Xavier B. da Silva",
+            "email": "rafaelxavierborges@gmail.com"
+        }
+    ]
+}
