@@ -25,7 +25,7 @@
         "sort-packages": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
+    "prefer-stable": false,
     "extra": {
         "laravel": {
             "providers": [
