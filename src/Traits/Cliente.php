@@ -75,7 +75,7 @@ trait Cliente
                 'additionalEmails'     => ''
             );
             
-            $this->cliente = array_merge($cliente);
+            $this->cliente = array_merge($this->cliente, $cliente);
             
         } catch (Exception $e) {
             return 'Erro ao definir o cliente. - ' . $e->getMessage();
