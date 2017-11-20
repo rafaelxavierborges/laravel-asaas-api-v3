@@ -1,5 +1,5 @@
 {
-    "name": "asaas/api",
+    "name": "asaas/laravel-asaas-api-v3",
     "description": "Pacote independente de integracao Asaas.com para Laravel 5",
     "keywords": [
         "asaas",
