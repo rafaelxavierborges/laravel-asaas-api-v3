@@ -1,16 +1,31 @@
 <?php
 
-namespace asaas\api\Traits;
+namespace Asaas\Api;
 
-use GuzzleHttp\Client;
-use assas\api\Exceptions\ClienteException;
+use Asaas\Api\Connection;
+use Asaas\Api\Exceptions\ClienteException;
 use Exception;
 
-trait Cliente
+class Cliente
 {
-    protected $access_token;
     
+    public $http;
     protected $cliente;
+    
+    public function __construct()
+    {
+        $this->http = new Connection;
+    }
+    
+    /**
+     * Retorna array de clientes.
+     * @return array
+     */
+    public function index()
+    {
+        return $this->http->get('/customers');
+    }
+    
     
     /**
      * Cria um novo cliente no Asaas.
@@ -19,28 +34,11 @@ trait Cliente
      */
     public function create($cliente)
     {
-        // Cria o array cliente (merge)
-        $cliente = $this->setCliente( $cliente );
+        // Preenche as informações do cliente
+        $cliente = $this->setCliente($cliente);
         
-        // Define os headers da requisição
-        $headers = array(
-            'headers' => array(
-                'Content-Type' => 'application/json',
-                'access_token' => $this->access_token
-            )
-        );
-        
-        // Cria um cliente guzzle
-        $client = Client( $headers );
-        
-        // Faz o post
-        $response = $client->request('POST', 'https://www.asaas.com/api/v3/customers', ['form_params' => $cliente]);
-        
-        // Retorna a resposta
-        return [
-            'code'     => $response->getStatusCode(),
-            'response' => $response->getBody()
-        ];
+        // Faz o post e retorna array de resposta
+        return $this->http->post('/customers', ['form_params' => $cliente]);
         
     }
     
@@ -76,6 +74,7 @@ trait Cliente
             );
             
             $this->cliente = array_merge($this->cliente, $cliente);
+            return $this->cliente;
             
         } catch (Exception $e) {
             return 'Erro ao definir o cliente. - ' . $e->getMessage();

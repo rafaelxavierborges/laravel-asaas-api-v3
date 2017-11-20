@@ -6,13 +6,13 @@
  * and open the template in the editor.
  */
 
-namespace asaas\api\Exceptions;
+namespace Asaas\Api\Exceptions;
 
 /**
- * Description of WebhookException
+ * Description of NotificacaoException
  *
  * @author Rafael
  */
-class WebhookException {
+class NotificacaoException {
     //put your code here
 }

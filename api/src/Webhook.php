@@ -1,6 +1,6 @@
 <?php
 
-namespace asaas\api\Traits;
+namespace Asaas\Api;
 
 
 class Webhook {

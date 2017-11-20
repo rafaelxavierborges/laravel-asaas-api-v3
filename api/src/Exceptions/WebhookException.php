@@ -6,13 +6,13 @@
  * and open the template in the editor.
  */
 
-namespace asaas\api\Exceptions;
+namespace Asaas\Api\Exceptions;
 
 /**
- * Description of CobrancaException
+ * Description of WebhookException
  *
  * @author Rafael
  */
-class CobrancaException {
+class WebhookException {
     //put your code here
 }

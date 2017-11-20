@@ -1,6 +1,6 @@
 <?php
 
-namespace asaas\api\Exceptions;
+namespace Asaas\Api\Exceptions;
 
 use Exception;
 

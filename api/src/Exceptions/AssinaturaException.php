@@ -6,13 +6,13 @@
  * and open the template in the editor.
  */
 
-namespace asaas\api\Exceptions;
+namespace Asaas\Api\Exceptions;
 
 /**
- * Description of NotificacaoException
+ * Description of AssinaturaException
  *
  * @author Rafael
  */
-class NotificacaoException {
+class AssinaturaException {
     //put your code here
 }
