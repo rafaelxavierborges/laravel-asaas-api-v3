@@ -13,12 +13,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Asaas\\Api\\": "laravel-asaas-api-v3/src/"
+            "Asaas\\Api\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Asaas\\Api\\Test\\": "laravel-asaas-api-v3/tests"
+            "Asaas\\Api\\Test\\": "tests"
         }
     },
     "config": {
